@@ -39,6 +39,24 @@ export default function BlogCard({
       console.log(error);
     }
   };
+
+  // Function to convert the time to Indian Standard Time (IST)
+  const getIndianStandardTime = (utcTime) => {
+    const options = {
+      timeZone: "Asia/Kolkata",
+      hour12: false,
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    };
+    return new Date(utcTime).toLocaleString("en-IN", options);
+  };
+
+  const formattedTime = getIndianStandardTime(time);
+
   return (
     <Card
       sx={{
@@ -69,9 +87,9 @@ export default function BlogCard({
           </Avatar>
         }
         title={username}
-        subheader={time}
+        subheader={formattedTime} 
       />
-      <CardMedia component="img" height="194" image={image} alt="image not found" />
+      <CardMedia component="img" height="300" image={image} alt="image not found" />
       <CardContent>
         <Typography variant="h6" color="text.secondary">
           Title : {title}
