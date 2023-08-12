@@ -1,5 +1,5 @@
 {
-  "name": "Wander Word",
+  "name": "wander_word",
   "version": "1.0.0",
   "description": "blog app",
   "main": "server.js",
@@ -9,7 +9,7 @@
     "client":"npm start --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "techinfoyt",
+  "author": "aditya",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",

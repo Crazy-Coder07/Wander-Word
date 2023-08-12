@@ -12,11 +12,15 @@ const blogSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      required: [true, "image is require"],
+      required: [true, "image is required"],
     },
     message: {
       type: String,
-      required: [true, "Message is require"],
+      required: [true, "Message is required"],
+    },
+    autherprofile: {
+      type: String,
+      required: [true, "autherprofile is required"],
     },
     user: {
       type: mongoose.Types.ObjectId,

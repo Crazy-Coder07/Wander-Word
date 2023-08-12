@@ -28,9 +28,11 @@ const Blogs = () => {
             description={blog?.description}
             image={blog?.image}
             message={blog?.message}
-            username={blog?.user?.username}
+            autherprofile=<a href={blog?.autherprofile} target="_blank">Go To Resources</a>
+            username={blog.user?.username}
             time={blog.createdAt}
-          />
+          >
+          </BlogCard>
         ))}
     </div>
   );

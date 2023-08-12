@@ -32,6 +32,7 @@ const UserBlogs = () => {
             description={blog.description}
             image={blog.image}
             message={blog.message}
+            autherprofile={blog.autherprofile}
             username={blog.user.username}
             time={blog.createdAt}
           />

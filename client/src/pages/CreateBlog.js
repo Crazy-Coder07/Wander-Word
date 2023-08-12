@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
+import { Box, Button, InputLabel, TextField, Typography} from "@mui/material";
 import toast from "react-hot-toast";
 
 
@@ -13,6 +13,7 @@ const CreateBlog = () => {
     description: "",
     image: "",
     message:"",
+    autherprofile:"",
   });
   // input change
   const handleChange = (e) => {
@@ -30,6 +31,7 @@ const CreateBlog = () => {
         description: inputs.description,
         image: inputs.image,
         message:inputs.message,
+        autherprofile:inputs.autherprofile,
         user: id,
       });
       if (data?.success) {
@@ -110,6 +112,19 @@ const CreateBlog = () => {
           <TextField
             name="message"
             value={inputs.message}
+            onChange={handleChange}
+            margin="normal"
+            variant="outlined"
+            required
+          />
+          <InputLabel
+            sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
+          >
+           Best Resources
+          </InputLabel>
+          <TextField
+            name="autherprofile"
+            value={inputs.autherprofile}
             onChange={handleChange}
             margin="normal"
             variant="outlined"

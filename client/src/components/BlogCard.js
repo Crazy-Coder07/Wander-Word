@@ -18,6 +18,7 @@ export default function BlogCard({
   description,
   image,
   message,
+  autherprofile,
   username,
   time,
   id,
@@ -61,6 +62,7 @@ export default function BlogCard({
     <Card
       sx={{
         width: "70%",
+        height:"50%",
         margin: "auto",
         mt: 2,
         padding: 2,
@@ -92,13 +94,16 @@ export default function BlogCard({
       <CardMedia component="img" height="300" image={image} alt="image not found" />
       <CardContent>
         <Typography variant="h6" color="text.secondary">
-          Title : {title}
+        <h3 style={{color:"green", display: "inline"}}>Title</h3> : {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Description : {description}
+          <h3 style={{color:"green", display: "inline"}}>Description</h3> : {description}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Message : {message}
+          <h3 style={{color:"green", display: "inline"}}>Message</h3> : {message}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          <h3 style={{color:"green", display: "inline"}}>Best resources</h3> : {autherprofile}
         </Typography>
       </CardContent>
     </Card>

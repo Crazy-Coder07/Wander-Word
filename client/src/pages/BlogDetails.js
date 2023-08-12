@@ -20,6 +20,7 @@ const BlogDetails = () => {
           description: data?.blog.description,
           image: data?.blog.image,
           message:data?.blog.message,
+          autherprofile:data?.blog.autherprofile,
         });
       }
     } catch (error) {
@@ -47,6 +48,7 @@ const BlogDetails = () => {
         description: inputs.description,
         image: inputs.image,
         message:inputs.message,
+        autherprofile:inputs.autherprofile,
         user: id,
       });
       if (data?.success) {
@@ -128,6 +130,19 @@ const BlogDetails = () => {
           <TextField
             name="message"
             value={inputs.message}
+            onChange={handleChange}
+            margin="normal"
+            variant="outlined"
+            required
+          />
+          <InputLabel
+            sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
+          >
+            autherprofile
+          </InputLabel>
+          <TextField
+            name="autherprofile"
+            value={inputs.autherprofile}
             onChange={handleChange}
             margin="normal"
             variant="outlined"
